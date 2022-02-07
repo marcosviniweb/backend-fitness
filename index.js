@@ -3,6 +3,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
+const cors = require('cors');
 
 // forma de ler o json
 
@@ -13,7 +14,7 @@ app.use(
 )
 
 app.use(express.json())
-
+app.use(cors());
 // rotas da api
 const userRoute = require('./routes/userRoute')
 
